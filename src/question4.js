@@ -1,6 +1,3 @@
-The JS file below has a few errors, can you indentify and fix them?
-
-```js
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
@@ -42,4 +39,3 @@ server.listen(80, () => {
     logger.log(error);
   });
 });
-```
