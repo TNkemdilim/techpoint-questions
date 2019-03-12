@@ -2,7 +2,9 @@ function countInstances(arr, val) {
   return arr.filter(item => item === val).length;
 }
 
-const isOdd = num => num % 2 !== 0;
+function isOdd(num) {
+  return num % 2 !== 0;
+}
 
 /**
  * This is the entry point to the program.

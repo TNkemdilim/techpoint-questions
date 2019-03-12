@@ -64,20 +64,17 @@ Object.freeze(MORSE_CODE);
  * @param {string} morseCode The string to decode.
  */
 function decodeMorse(morseCode) {
-  // Your code should go here.
   return (
     morseCode
-      // remove whitespace at the end and beginning of the code since they do not matter
       .trim()
-      // Replace all three spaces with a delimiter
+      // Replace all three spaces with a delimiter.
       .replace(/\s{3}/g, " | ")
-      // Replace other space combinations with a single space
+      // Replace other space combinations with a single space.
       .replace(/\w+\s{1,}/g, /\s/)
-      // split the code into words based on space
+      // Split code into words based on space.
       .split(/\s/)
-      // convert codes into letters
+      // Convert codes into letters.
       .map(char => (char === "|" ? " " : MORSE_CODE[char]))
-      // join the array into a string
       .join("")
   );
 }
